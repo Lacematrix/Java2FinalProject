@@ -38,6 +38,10 @@ public class QuestionService {
         return questionRepository.findDistribution();
     }
 
+    public List<Question> getAllQuestion(){
+        return questionRepository.findAll();
+    }
+
     public void addQuestion() throws IOException {
         for (int i = 0; i < 5; i++) {
             String jsonStrings = Files.readString(Path.of("src/main/java/LoadData/Data/" + (i + 1) + ".json"));

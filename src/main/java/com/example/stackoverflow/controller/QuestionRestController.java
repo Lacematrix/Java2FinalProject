@@ -48,6 +48,6 @@ public class QuestionRestController {
 
     @GetMapping
     public ResponseEntity<Object> getQuestion(){
-        return ResponseEntity.ok(null);
+        return ResponseEntity.ok(questionService.getAllQuestion());
     }
 }

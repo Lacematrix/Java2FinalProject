@@ -67,7 +67,7 @@ function creatPiechart(div, piechartRaw, name) {
             }
         ]
     };
-    piechart.setOption(pieOption)
+    piechart.setOption(pieOption, true)
     window.onresize = piechart.resize;
 }
 
@@ -123,7 +123,7 @@ function creatWordCloud(div, wordcloudRaw, name) {
             })
         }]
     };
-    wordcloud.setOption(wordcloudOption);
+    wordcloud.setOption(wordcloudOption,true);
     window.onresize = wordcloud.resize;
 }
 
@@ -189,7 +189,7 @@ function creatHistogram(div, data, name) {
         //   // }
         // ]
     };
-    histogram.setOption(histogramOption);
+    histogram.setOption(histogramOption,true);
     window.onresize = histogram.resize;
 }
 function creatRedHistogram(div, data, name) {
@@ -238,7 +238,7 @@ function creatRedHistogram(div, data, name) {
         }],
         series: allData
     }
-    histogram.setOption(histogramOption);
+    histogram.setOption(histogramOption,true);
     window.onresize = histogram.resize;
 }
 

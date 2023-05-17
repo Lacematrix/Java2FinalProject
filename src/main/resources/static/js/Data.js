@@ -2,7 +2,7 @@ document.write("<script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></sc
 function getData(type) {
     let respondData;
     $.ajax({
-        url: '/api/Question/' + type,
+        url: '/api' + type,
         type: 'GET',
         dataType: 'json',
         async: false,

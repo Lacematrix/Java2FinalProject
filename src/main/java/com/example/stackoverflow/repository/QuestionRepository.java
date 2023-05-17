@@ -10,6 +10,8 @@ import java.util.Map;
 public interface QuestionRepository extends JpaRepository<Question, Long> {
     long countByIsAnswered(boolean isAnswered);
 
+    long count();
+
     @Query("SELECT MAX(e.answerCount) FROM Question e")
     double findMaxValue();
 

@@ -42,9 +42,13 @@ public class QuestionService {
         return questionRepository.findAll();
     }
 
-    public void addQuestion() throws IOException {
-        for (int i = 0; i < 5; i++) {
-            String jsonStrings = Files.readString(Path.of("src/main/java/LoadData/Data/" + (i + 1) + ".json"));
+    public long getNumberOfQuestion(){
+        return questionRepository.count();
+    }
+
+    public void addQuestion(int n) throws IOException {
+        for (int i = 1; i <= n; i++) {
+            String jsonStrings = Files.readString(Path.of("src/main/java/LoadData/Data/Question/Question" + i + ".json"));
             JSONObject jsonObject = JSON.parseObject(jsonStrings);
             JSONArray itemsArray = jsonObject.getJSONArray("items");
             List<QuestionLoad> questions = itemsArray.toJavaList(QuestionLoad.class);

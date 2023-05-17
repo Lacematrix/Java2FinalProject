@@ -50,4 +50,5 @@ public class QuestionRestController {
     public ResponseEntity<Object> getQuestion(){
         return ResponseEntity.ok(questionService.getAllQuestion());
     }
+
 }

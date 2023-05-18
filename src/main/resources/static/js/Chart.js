@@ -43,10 +43,11 @@ function creatPiechart(div, piechartRaw, name) {
             {
                 name: 'Problem Count',
                 type: 'pie',
-                radius: '80%',
+                radius: '70%',
                 data: piechartData,
                 color: ['#9400D3', '#FF00FF', '#4169E1', '#3CB371',
-                    '#FFA500', '#FF7F50', '#DC143C', '#000080'],
+                    '#FFA500', '#FF7F50', '#DC143C', '#000080'
+                    ,'#41311d','rgba(36,29,65,0.5)','rgba(110,43,117,0.45)','#ecd8bf'],
                 emphasis: {
                     itemStyle: {
                         shadowBlur: 10,
@@ -127,7 +128,7 @@ function creatWordCloud(div, wordcloudRaw, name) {
     window.onresize = wordcloud.resize;
 }
 
-function creatHistogram(div, data, name) {
+function creatHistogram(div, data, name, unit) {
     let histogram = echarts.init(document.getElementById(div));
     let key = Object.keys(data);
     let value = Object.values(data);
@@ -163,7 +164,7 @@ function creatHistogram(div, data, name) {
         yAxis: [{
             type: 'value',
             axisLabel: {
-                formatter: '{value} %'
+                formatter: '{value} ' + unit
             }
         }],
         series: allData
@@ -192,7 +193,7 @@ function creatHistogram(div, data, name) {
     histogram.setOption(histogramOption,true);
     window.onresize = histogram.resize;
 }
-function creatRedHistogram(div, data, name) {
+function creatRedHistogram(div, data, name, unit) {
     let histogram = echarts.init(document.getElementById(div));
     let key = Object.keys(data);
     let value = Object.values(data);
@@ -233,12 +234,74 @@ function creatRedHistogram(div, data, name) {
         yAxis: [{
             type: 'value',
             axisLabel: {
-                formatter: '{value} '
+                formatter: '{value} ' + unit
             }
         }],
         series: allData
     }
     histogram.setOption(histogramOption,true);
+    window.onresize = histogram.resize;
+}
+
+function creatHistogramAnimation(div, data, name, unit){
+    let histogram = echarts.init(document.getElementById(div));
+    let key = Object.keys(data);
+    let value = Object.values(data);
+    let allData = [];
+    for (let i = 0; i < key.length; i++) {
+        allData.push({
+            name: key[i],
+            type: 'bar',
+            color: 'rgb(0,255,81)',
+            data: [value[i]],
+            showBackground: true,
+            backgroundStyle: {
+                color: 'rgba(220, 220, 220, 0.8)'
+            },
+            animationDelay: function (idx) {
+                return idx * 30 * (i + 1);
+            }
+        })
+    }
+
+    option = {
+        title: {
+            text: name
+        },
+        legend: {
+            data: 'data'
+        },
+        toolbox: {
+            // y: 'bottom',
+            feature: {
+                magicType: {
+                    type: ['stack', 'tiled']
+                },
+                dataView: {},
+                saveAsImage: {
+                    pixelRatio: 2
+                }
+            }
+        },
+        tooltip: {},
+        xAxis: {
+            data: [key],
+            splitLine: {
+                show: false
+            }
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {formatter: '{value} ' + unit
+            }
+        },
+        series: allData,
+        animationEasing: 'elasticOut',
+        animationDelayUpdate: function (idx) {
+            return idx * 5;
+        }
+    };
+    histogram.setOption(option,true);
     window.onresize = histogram.resize;
 }
 

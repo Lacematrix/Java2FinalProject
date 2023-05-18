@@ -48,7 +48,16 @@ public class AnswerRestController {
 
     @GetMapping("/MoreUpvote")
     public ResponseEntity<Object> getMoreUpvote(){
-        return null;
+        List<Object[]> result = answerService.getMoreVotes();
+        Map<Integer, Integer> MoreUpvoteSize = new HashMap<>();
+        Map<String, Double> MoreUpvote = new HashMap<>();
+        result.forEach(objects -> {
+            MoreUpvoteSize.put((int)objects[2], 1);
+        });
+        double per = 100 * (double) MoreUpvoteSize.size() / answerService.getQuestionNum();
+        MoreUpvote.put("non-acceptedMoreVotes", per);
+        MoreUpvote.put("others", 100 - per);
+        return ResponseEntity.ok(MoreUpvote);
     }
 
     @GetMapping

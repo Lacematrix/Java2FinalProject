@@ -13,6 +13,8 @@ public class Answer {
     @Id
     @GeneratedValue
     private Long id;
+
+    private long upVoteCount;
     private boolean isAccepted;
     private int score;
     private long lastActivityDate;
@@ -25,7 +27,8 @@ public class Answer {
     public Answer() {
     }
 
-    public Answer(boolean isAccepted, int score, long lastActivityDate, long lastEditDate, long creationDate, int answerId, int questionId, String contentLicense) {
+    public Answer(long upVoteCount,boolean isAccepted, int score, long lastActivityDate, long lastEditDate, long creationDate, int answerId, int questionId, String contentLicense) {
+        this.upVoteCount = upVoteCount;
         this.isAccepted = isAccepted;
         this.score = score;
         this.lastActivityDate = lastActivityDate;
@@ -34,6 +37,14 @@ public class Answer {
         this.answerId = answerId;
         this.questionId = questionId;
         this.contentLicense = contentLicense;
+    }
+
+    public long getUpVoteCount() {
+        return upVoteCount;
+    }
+
+    public void setUpVoteCount(long upVoteCount) {
+        this.upVoteCount = upVoteCount;
     }
 
     public boolean isAccepted() {
@@ -98,5 +109,21 @@ public class Answer {
 
     public void setContentLicense(String contentLicense) {
         this.contentLicense = contentLicense;
+    }
+
+    @Override
+    public String toString() {
+        return "Answer{" +
+                "id=" + id +
+                ", upVoteCount=" + upVoteCount +
+                ", isAccepted=" + isAccepted +
+                ", score=" + score +
+                ", lastActivityDate=" + lastActivityDate +
+                ", lastEditDate=" + lastEditDate +
+                ", creationDate=" + creationDate +
+                ", answerId=" + answerId +
+                ", questionId=" + questionId +
+                ", contentLicense='" + contentLicense + '\'' +
+                '}';
     }
 }

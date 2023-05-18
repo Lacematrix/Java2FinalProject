@@ -23,7 +23,7 @@ public class LoadDataFramework {
         int n = 5;
         String dataPath = "src/main/java/LoadData/Data/";
         //catchQuestion(n, dataPath);
-        catchAnswer(n, dataPath);
+        //catchAnswer(n, dataPath);
     }
 
     public static void catchQuestion(int n, String dataPath) throws IOException {

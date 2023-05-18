@@ -19,8 +19,9 @@ public class StackOverflowApplication {
 	public CommandLineRunner commandLineRunner(QuestionService questionService, AnswerService answerService){
 		return args -> {
 			try {
-				questionService.addQuestion(5);
-				answerService.addAnswer(5);
+				int n = 5;
+				questionService.addQuestion(n);
+				answerService.addAnswer(n);
 				answerService.setQuestionNum(questionService.getNumberOfQuestion());
 			}catch (Exception e){
 				System.out.println(e);

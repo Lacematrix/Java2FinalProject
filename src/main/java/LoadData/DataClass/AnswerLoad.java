@@ -2,6 +2,8 @@ package LoadData.DataClass;
 
 public class AnswerLoad {
     private Owner owner;
+
+    private long up_vote_count;
     private boolean is_accepted;
     private int score;
     private long last_activity_date;
@@ -17,6 +19,14 @@ public class AnswerLoad {
 
     public void setOwner(Owner owner) {
         this.owner = owner;
+    }
+
+    public long getUp_vote_count() {
+        return up_vote_count;
+    }
+
+    public void setUp_vote_count(long up_vote_count) {
+        this.up_vote_count = up_vote_count;
     }
 
     public boolean isIs_accepted() {

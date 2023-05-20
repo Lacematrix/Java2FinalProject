@@ -2,7 +2,6 @@ package com.example.stackoverflow;
 
 import com.example.stackoverflow.service.AnswerService;
 import com.example.stackoverflow.service.QuestionService;
-import com.example.stackoverflow.service.StudentService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

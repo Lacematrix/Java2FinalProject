@@ -36,7 +36,7 @@ public class TagService {
 
 
   public void saveTags(String tagCombination,int size,int view,int upvote){
-    Tag tag = tagRepository.findTagByTagCombination(tagCombination);
+    Tag tag = tagRepository.getTagByTagCombination(tagCombination);
     if (tag != null) {
       tag.setNum(tag.getNum() + 1);
       tag.setView(tag.getView()+view);

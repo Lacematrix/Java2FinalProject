@@ -31,7 +31,7 @@ public class UserService {
   }
 
   public void saveUser(UserStructure userStructure) {
-    User user = userRepository.findUserById(userStructure.getUser_id());
+    User user = userRepository.getUserById(userStructure.getUser_id());
     if (user != null) {
       user.setJoinCnt(user.getJoinCnt() + 1);
     } else {

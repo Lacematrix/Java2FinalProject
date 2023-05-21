@@ -1,0 +1,1177 @@
+{
+  "items": [
+    {
+      "tags": [
+        "java",
+        "api-design",
+        "idempotent"
+      ],
+      "view_count": 26,
+      "up_vote_count": 0,
+      "last_activity_date": 1684592586,
+      "question_id": 76295696
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "arraylist",
+        "hashset",
+        "modelmapper"
+      ],
+      "view_count": 19,
+      "up_vote_count": 0,
+      "last_activity_date": 1684592516,
+      "question_id": 76295691
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "kotlin",
+        "android-jetpack-compose"
+      ],
+      "view_count": 31,
+      "up_vote_count": 0,
+      "last_activity_date": 1684592387,
+      "question_id": 76295411
+    },
+    {
+      "tags": [
+        "java",
+        "mockito",
+        "completable-future"
+      ],
+      "view_count": 16287,
+      "up_vote_count": 7,
+      "last_activity_date": 1684591686,
+      "question_id": 53021545
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "android-softkeyboard",
+        "android-input-method",
+        "android-custom-keyboard"
+      ],
+      "view_count": 10,
+      "up_vote_count": 0,
+      "last_activity_date": 1684591361,
+      "question_id": 76279935
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "spring-boot-actuator"
+      ],
+      "view_count": 256,
+      "up_vote_count": 1,
+      "last_activity_date": 1684590893,
+      "question_id": 75416778
+    },
+    {
+      "tags": [
+        "java",
+        "postgresql",
+        "spring-boot",
+        "hibernate",
+        "jpa"
+      ],
+      "view_count": 23,
+      "up_vote_count": 0,
+      "last_activity_date": 1684590626,
+      "question_id": 76286393
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "android-notifications"
+      ],
+      "view_count": 17,
+      "up_vote_count": 0,
+      "last_activity_date": 1684590624,
+      "question_id": 76295296
+    },
+    {
+      "tags": [
+        "java",
+        "arrays",
+        "swing",
+        "intellij-idea",
+        "jtable"
+      ],
+      "view_count": 31,
+      "up_vote_count": 0,
+      "last_activity_date": 1684590150,
+      "question_id": 76293415
+    },
+    {
+      "tags": [
+        "java"
+      ],
+      "view_count": 10819,
+      "up_vote_count": 1,
+      "last_activity_date": 1684589693,
+      "question_id": 39528162
+    },
+    {
+      "tags": [
+        "python",
+        "java",
+        "multithreading",
+        "fastapi",
+        "project-loom"
+      ],
+      "view_count": 5975,
+      "up_vote_count": 3,
+      "last_activity_date": 1684589489,
+      "question_id": 73026698
+    },
+    {
+      "tags": [
+        "java",
+        "rest",
+        "web-services",
+        "response"
+      ],
+      "view_count": 22,
+      "up_vote_count": 0,
+      "last_activity_date": 1684589224,
+      "question_id": 76245811
+    },
+    {
+      "tags": [
+        "java",
+        "arrays",
+        "function",
+        "sorting",
+        "filesystems"
+      ],
+      "view_count": 22,
+      "up_vote_count": 0,
+      "last_activity_date": 1684588689,
+      "question_id": 76295406
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "spring-boot",
+        "spring-security",
+        "jwt"
+      ],
+      "view_count": 1444,
+      "up_vote_count": 9,
+      "last_activity_date": 1684588593,
+      "question_id": 61405182
+    },
+    {
+      "tags": [
+        "java",
+        "reactive-programming",
+        "spring-webflux",
+        "project-reactor",
+        "webtestclient"
+      ],
+      "view_count": 9893,
+      "up_vote_count": 7,
+      "last_activity_date": 1684588374,
+      "question_id": 67534602
+    },
+    {
+      "tags": [
+        "java",
+        "minecraft",
+        "porting",
+        "minecraft-forge"
+      ],
+      "view_count": 32,
+      "up_vote_count": 0,
+      "last_activity_date": 1684587898,
+      "question_id": 76291771
+    },
+    {
+      "tags": [
+        "java",
+        "loops",
+        "if-statement"
+      ],
+      "view_count": 16,
+      "up_vote_count": 0,
+      "last_activity_date": 1684587781,
+      "question_id": 76295373
+    },
+    {
+      "tags": [
+        "java",
+        "ssl",
+        "ldap"
+      ],
+      "view_count": 22,
+      "up_vote_count": 0,
+      "last_activity_date": 1684587649,
+      "question_id": 76294134
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "hibernate",
+        "spring-mvc"
+      ],
+      "view_count": 11062,
+      "up_vote_count": 0,
+      "last_activity_date": 1684587630,
+      "question_id": 26402875
+    },
+    {
+      "tags": [
+        "java",
+        "unit-testing",
+        "generics",
+        "mockito"
+      ],
+      "view_count": 9755,
+      "up_vote_count": 1,
+      "last_activity_date": 1684587630,
+      "question_id": 19665273
+    },
+    {
+      "tags": [
+        "java",
+        "arrays",
+        "global-variables"
+      ],
+      "view_count": 8178,
+      "up_vote_count": 1,
+      "last_activity_date": 1684587630,
+      "question_id": 4451937
+    },
+    {
+      "tags": [
+        "java",
+        "jpa",
+        "annotations",
+        "one-to-one"
+      ],
+      "view_count": 16,
+      "up_vote_count": 0,
+      "last_activity_date": 1684587255,
+      "question_id": 76291469
+    },
+    {
+      "tags": [
+        "java",
+        "performance",
+        "sqlite",
+        "jdbc",
+        "resultset"
+      ],
+      "view_count": 310,
+      "up_vote_count": 0,
+      "last_activity_date": 1684587170,
+      "question_id": 57750779
+    },
+    {
+      "tags": [
+        "java",
+        "sql",
+        "spring",
+        "datetime",
+        "jpa"
+      ],
+      "view_count": 18,
+      "up_vote_count": 0,
+      "last_activity_date": 1684587048,
+      "question_id": 76295244
+    },
+    {
+      "tags": [
+        "java",
+        "netbeans",
+        "derby",
+        "javadb"
+      ],
+      "view_count": 24,
+      "up_vote_count": 0,
+      "last_activity_date": 1684586931,
+      "question_id": 76295234
+    },
+    {
+      "tags": [
+        "java",
+        "arrays"
+      ],
+      "view_count": 44,
+      "up_vote_count": 0,
+      "last_activity_date": 1684586931,
+      "question_id": 76294284
+    },
+    {
+      "tags": [
+        "java",
+        "javafx"
+      ],
+      "view_count": 66,
+      "up_vote_count": 1,
+      "last_activity_date": 1684586746,
+      "question_id": 76284010
+    },
+    {
+      "tags": [
+        "java",
+        "selenium-webdriver",
+        "web-testing",
+        "getattribute"
+      ],
+      "view_count": 35,
+      "up_vote_count": 0,
+      "last_activity_date": 1684586607,
+      "question_id": 76250004
+    },
+    {
+      "tags": [
+        "java",
+        "gradle",
+        "groovy"
+      ],
+      "view_count": 37,
+      "up_vote_count": 0,
+      "last_activity_date": 1684585985,
+      "question_id": 76278483
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "spring-mvc"
+      ],
+      "view_count": 28,
+      "up_vote_count": 0,
+      "last_activity_date": 1684585898,
+      "question_id": 76295045
+    },
+    {
+      "tags": [
+        "java",
+        "multithreading",
+        "concurrency",
+        "java-threads",
+        "thread-synchronization"
+      ],
+      "view_count": 28,
+      "up_vote_count": 0,
+      "last_activity_date": 1684585653,
+      "question_id": 76295207
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "docker",
+        "logging",
+        "newrelic"
+      ],
+      "view_count": 41,
+      "up_vote_count": 0,
+      "last_activity_date": 1684585169,
+      "question_id": 76294341
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "firebase-authentication",
+        "email-verification"
+      ],
+      "view_count": 30,
+      "up_vote_count": 0,
+      "last_activity_date": 1684584579,
+      "question_id": 76292910
+    },
+    {
+      "tags": [
+        "java",
+        "dto",
+        "modelmapper"
+      ],
+      "view_count": 20,
+      "up_vote_count": 0,
+      "last_activity_date": 1684584445,
+      "question_id": 76295149
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "android-dialogfragment",
+        "android-gridview",
+        "android-adapterview"
+      ],
+      "view_count": 7,
+      "up_vote_count": 0,
+      "last_activity_date": 1684584340,
+      "question_id": 76295141
+    },
+    {
+      "tags": [
+        "java",
+        "axis",
+        "webservice-client",
+        "jboss6.x"
+      ],
+      "view_count": 10285,
+      "up_vote_count": 1,
+      "last_activity_date": 1684584340,
+      "question_id": 10492995
+    },
+    {
+      "tags": [
+        "java",
+        "excel",
+        "excel-2010",
+        "business-objects"
+      ],
+      "view_count": 4437,
+      "up_vote_count": 1,
+      "last_activity_date": 1684584006,
+      "question_id": 34543733
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "hibernate"
+      ],
+      "view_count": 18,
+      "up_vote_count": 0,
+      "last_activity_date": 1684583828,
+      "question_id": 76294270
+    },
+    {
+      "tags": [
+        "java",
+        "nullpointerexception",
+        "business-objects",
+        "webi"
+      ],
+      "view_count": 1651,
+      "up_vote_count": 2,
+      "last_activity_date": 1684583796,
+      "question_id": 35060334
+    },
+    {
+      "tags": [
+        "java",
+        "arrays"
+      ],
+      "view_count": 46,
+      "up_vote_count": 0,
+      "last_activity_date": 1684583655,
+      "question_id": 76290332
+    },
+    {
+      "tags": [
+        "java",
+        "hibernate",
+        "orm",
+        "crud"
+      ],
+      "view_count": 19,
+      "up_vote_count": 0,
+      "last_activity_date": 1684583554,
+      "question_id": 76294806
+    },
+    {
+      "tags": [
+        "java",
+        "garbage-collection",
+        "java-mission-control",
+        "zgc",
+        "shenandoah"
+      ],
+      "view_count": 13,
+      "up_vote_count": 0,
+      "last_activity_date": 1684583407,
+      "question_id": 76295073
+    },
+    {
+      "tags": [
+        "java",
+        "algorithm",
+        "math",
+        "precision",
+        "mod"
+      ],
+      "view_count": 1928,
+      "up_vote_count": 2,
+      "last_activity_date": 1684582543,
+      "question_id": 39068283
+    },
+    {
+      "tags": [
+        "java"
+      ],
+      "view_count": 40,
+      "up_vote_count": 0,
+      "last_activity_date": 1684581554,
+      "question_id": 76294860
+    },
+    {
+      "tags": [
+        "java",
+        "tcp",
+        "ip",
+        "serversocket"
+      ],
+      "view_count": 370,
+      "up_vote_count": 0,
+      "last_activity_date": 1684581443,
+      "question_id": 75614738
+    },
+    {
+      "tags": [
+        "java",
+        "apache",
+        "netbeans"
+      ],
+      "view_count": 37,
+      "up_vote_count": 0,
+      "last_activity_date": 1684580904,
+      "question_id": 76294550
+    },
+    {
+      "tags": [
+        "java",
+        "java-http-client"
+      ],
+      "view_count": 1316,
+      "up_vote_count": 2,
+      "last_activity_date": 1684580732,
+      "question_id": 70752187
+    },
+    {
+      "tags": [
+        "java",
+        "jsp",
+        "servlets",
+        "jdbc"
+      ],
+      "view_count": 15048,
+      "up_vote_count": 2,
+      "last_activity_date": 1684579908,
+      "question_id": 18157290
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "android-layout",
+        "bottomnavigationview"
+      ],
+      "view_count": 1796,
+      "up_vote_count": 2,
+      "last_activity_date": 1684579027,
+      "question_id": 57836099
+    },
+    {
+      "tags": [
+        "java",
+        "azure",
+        "azure-sql-database"
+      ],
+      "view_count": 21,
+      "up_vote_count": 0,
+      "last_activity_date": 1684578620,
+      "question_id": 76294723
+    },
+    {
+      "tags": [
+        "java",
+        "quartz-scheduler"
+      ],
+      "view_count": 272,
+      "up_vote_count": 0,
+      "last_activity_date": 1684578532,
+      "question_id": 8712287
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "nullpointerexception",
+        "sdk",
+        "navigation"
+      ],
+      "view_count": 8,
+      "up_vote_count": 0,
+      "last_activity_date": 1684578128,
+      "question_id": 76287558
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "mockito",
+        "junit5",
+        "spring-mvc-test"
+      ],
+      "view_count": 36,
+      "up_vote_count": 0,
+      "last_activity_date": 1684577714,
+      "question_id": 76294619
+    },
+    {
+      "tags": [
+        "java",
+        "intellij-idea"
+      ],
+      "view_count": 44849,
+      "up_vote_count": 32,
+      "last_activity_date": 1684577365,
+      "question_id": 33531334
+    },
+    {
+      "tags": [
+        "java",
+        "hashmap",
+        "uml",
+        "class-diagram"
+      ],
+      "view_count": 42,
+      "up_vote_count": 2,
+      "last_activity_date": 1684576289,
+      "question_id": 76287060
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "firebase",
+        "firebase-realtime-database"
+      ],
+      "view_count": 62,
+      "up_vote_count": 1,
+      "last_activity_date": 1684576016,
+      "question_id": 49302976
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "kotlin",
+        "build.gradle",
+        "kapt"
+      ],
+      "view_count": 11,
+      "up_vote_count": 0,
+      "last_activity_date": 1684575673,
+      "question_id": 76294240
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "android-studio",
+        "retrofit"
+      ],
+      "view_count": 18,
+      "up_vote_count": 0,
+      "last_activity_date": 1684575334,
+      "question_id": 76294472
+    },
+    {
+      "tags": [
+        "java",
+        "spring-webflux",
+        "reactive-programming",
+        "project-reactor"
+      ],
+      "view_count": 418,
+      "up_vote_count": 1,
+      "last_activity_date": 1684574529,
+      "question_id": 75499834
+    },
+    {
+      "tags": [
+        "java",
+        "limesurvey"
+      ],
+      "view_count": 10,
+      "up_vote_count": 0,
+      "last_activity_date": 1684572453,
+      "question_id": 76294291
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "spring-boot",
+        "dependency-injection"
+      ],
+      "view_count": 85,
+      "up_vote_count": 1,
+      "last_activity_date": 1684572342,
+      "question_id": 76194695
+    },
+    {
+      "tags": [
+        "java",
+        "hibernate",
+        "jpa"
+      ],
+      "view_count": 19,
+      "up_vote_count": 0,
+      "last_activity_date": 1684571569,
+      "question_id": 76294192
+    },
+    {
+      "tags": [
+        "java",
+        "http",
+        "networking",
+        "jmeter"
+      ],
+      "view_count": 18680,
+      "up_vote_count": 1,
+      "last_activity_date": 1684569845,
+      "question_id": 45671822
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "spring-boot",
+        "lombok"
+      ],
+      "view_count": 12697,
+      "up_vote_count": 3,
+      "last_activity_date": 1684569814,
+      "question_id": 54128732
+    },
+    {
+      "tags": [
+        "java",
+        "protocol-buffers",
+        "protostuff"
+      ],
+      "view_count": 171,
+      "up_vote_count": 2,
+      "last_activity_date": 1684569437,
+      "question_id": 76119142
+    },
+    {
+      "tags": [
+        "java",
+        "database",
+        "postgresql",
+        "spring-boot",
+        "spring-data-jpa"
+      ],
+      "view_count": 31,
+      "up_vote_count": 0,
+      "last_activity_date": 1684569347,
+      "question_id": 76293886
+    },
+    {
+      "tags": [
+        "java",
+        "recursion",
+        "data-structures",
+        "binary-search-tree"
+      ],
+      "view_count": 22,
+      "up_vote_count": 0,
+      "last_activity_date": 1684568890,
+      "question_id": 76293936
+    },
+    {
+      "tags": [
+        "java"
+      ],
+      "view_count": 34,
+      "up_vote_count": 0,
+      "last_activity_date": 1684566962,
+      "question_id": 76293620
+    },
+    {
+      "tags": [
+        "java",
+        "concurrency",
+        "transactions",
+        "atomic"
+      ],
+      "view_count": 52,
+      "up_vote_count": 0,
+      "last_activity_date": 1684565112,
+      "question_id": 76287062
+    },
+    {
+      "tags": [
+        "java",
+        "postgresql",
+        "jdbc",
+        "mybatis"
+      ],
+      "view_count": 13,
+      "up_vote_count": 1,
+      "last_activity_date": 1684564210,
+      "question_id": 76293824
+    },
+    {
+      "tags": [
+        "java",
+        "eclipse",
+        "selenium",
+        "testng"
+      ],
+      "view_count": 36390,
+      "up_vote_count": 0,
+      "last_activity_date": 1684564197,
+      "question_id": 51688951
+    },
+    {
+      "tags": [
+        "javascript",
+        "java",
+        "eclipse",
+        "audio",
+        "eclipse-rap"
+      ],
+      "view_count": 17,
+      "up_vote_count": 0,
+      "last_activity_date": 1684563802,
+      "question_id": 76293177
+    },
+    {
+      "tags": [
+        "java",
+        "ssl"
+      ],
+      "view_count": 330747,
+      "up_vote_count": 63,
+      "last_activity_date": 1684563760,
+      "question_id": 28908835
+    },
+    {
+      "tags": [
+        "java",
+        "gwt",
+        "ant",
+        "code-coverage",
+        "jacoco"
+      ],
+      "view_count": 12,
+      "up_vote_count": 0,
+      "last_activity_date": 1684563479,
+      "question_id": 76293784
+    },
+    {
+      "tags": [
+        "java",
+        "maven",
+        "command-line"
+      ],
+      "view_count": 58161,
+      "up_vote_count": 71,
+      "last_activity_date": 1684561618,
+      "question_id": 50260921
+    },
+    {
+      "tags": [
+        "java",
+        "generics"
+      ],
+      "view_count": 36,
+      "up_vote_count": 2,
+      "last_activity_date": 1684561150,
+      "question_id": 76293472
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "android-studio"
+      ],
+      "view_count": 2006,
+      "up_vote_count": 6,
+      "last_activity_date": 1684560686,
+      "question_id": 32624584
+    },
+    {
+      "tags": [
+        "java",
+        "hash"
+      ],
+      "view_count": 28,
+      "up_vote_count": 0,
+      "last_activity_date": 1684560216,
+      "question_id": 76293642
+    },
+    {
+      "tags": [
+        "java",
+        "eclipse",
+        "java-8",
+        "java-11"
+      ],
+      "view_count": 44,
+      "up_vote_count": 2,
+      "last_activity_date": 1684559632,
+      "question_id": 76291137
+    },
+    {
+      "tags": [
+        "java",
+        "concurrency",
+        "locking"
+      ],
+      "view_count": 36,
+      "up_vote_count": 0,
+      "last_activity_date": 1684559541,
+      "question_id": 75865204
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "caching",
+        "jcache",
+        "jsr107"
+      ],
+      "view_count": 8580,
+      "up_vote_count": 6,
+      "last_activity_date": 1684558860,
+      "question_id": 37342548
+    },
+    {
+      "tags": [
+        "java",
+        "docker",
+        "amazon-ecs",
+        "aws-fargate",
+        "amazon-ecr"
+      ],
+      "view_count": 25,
+      "up_vote_count": 1,
+      "last_activity_date": 1684558602,
+      "question_id": 76293575
+    },
+    {
+      "tags": [
+        "java",
+        "string",
+        "sorting",
+        "bigdecimal"
+      ],
+      "view_count": 832,
+      "up_vote_count": 0,
+      "last_activity_date": 1684558512,
+      "question_id": 62834745
+    },
+    {
+      "tags": [
+        "java",
+        "performance"
+      ],
+      "view_count": 34,
+      "up_vote_count": 0,
+      "last_activity_date": 1684558439,
+      "question_id": 76289641
+    },
+    {
+      "tags": [
+        "java",
+        "shapes",
+        "area",
+        "polygons"
+      ],
+      "view_count": 1960,
+      "up_vote_count": 6,
+      "last_activity_date": 1684554995,
+      "question_id": 49395603
+    },
+    {
+      "tags": [
+        "java",
+        "bit",
+        "bitset"
+      ],
+      "view_count": 67,
+      "up_vote_count": 1,
+      "last_activity_date": 1684552912,
+      "question_id": 76293211
+    },
+    {
+      "tags": [
+        "java",
+        "selenium-webdriver",
+        "testing",
+        "automation",
+        "selenium-chromedriver"
+      ],
+      "view_count": 18,
+      "up_vote_count": 0,
+      "last_activity_date": 1684551450,
+      "question_id": 76293353
+    },
+    {
+      "tags": [
+        "java",
+        "eclipse",
+        "jd-gui"
+      ],
+      "view_count": 18,
+      "up_vote_count": 0,
+      "last_activity_date": 1684551427,
+      "question_id": 76293352
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "ssl",
+        "curl",
+        "resttemplate"
+      ],
+      "view_count": 74,
+      "up_vote_count": 0,
+      "last_activity_date": 1684550988,
+      "question_id": 75783226
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "database",
+        "sqlite",
+        "user-data"
+      ],
+      "view_count": 13,
+      "up_vote_count": 0,
+      "last_activity_date": 1684549705,
+      "question_id": 76290622
+    },
+    {
+      "tags": [
+        "java",
+        "android",
+        "voip",
+        "viber"
+      ],
+      "view_count": 896,
+      "up_vote_count": 0,
+      "last_activity_date": 1684549671,
+      "question_id": 41302051
+    },
+    {
+      "tags": [
+        "java",
+        "concurrency",
+        "java-threads"
+      ],
+      "view_count": 14,
+      "up_vote_count": 0,
+      "last_activity_date": 1684549410,
+      "question_id": 76293296
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "spring-boot",
+        "spring-security"
+      ],
+      "view_count": 45,
+      "up_vote_count": 0,
+      "last_activity_date": 1684547048,
+      "question_id": 76290602
+    },
+    {
+      "tags": [
+        "java",
+        "spotbugs",
+        "find-sec-bugs"
+      ],
+      "view_count": 22,
+      "up_vote_count": 0,
+      "last_activity_date": 1684546646,
+      "question_id": 76288957
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "spring-boot",
+        "kotlin",
+        "yaml"
+      ],
+      "view_count": 64114,
+      "up_vote_count": 48,
+      "last_activity_date": 1684545831,
+      "question_id": 24448947
+    },
+    {
+      "tags": [
+        "java",
+        "loops",
+        "class",
+        "recursion",
+        "nested"
+      ],
+      "view_count": 48,
+      "up_vote_count": 1,
+      "last_activity_date": 1684545557,
+      "question_id": 76291041
+    },
+    {
+      "tags": [
+        "java",
+        "jakarta-ee",
+        "cdi",
+        "open-liberty"
+      ],
+      "view_count": 16,
+      "up_vote_count": 0,
+      "last_activity_date": 1684545502,
+      "question_id": 76293162
+    },
+    {
+      "tags": [
+        "java",
+        "spring",
+        "annotations"
+      ],
+      "view_count": 52327,
+      "up_vote_count": 43,
+      "last_activity_date": 1684544974,
+      "question_id": 4131190
+    },
+    {
+      "tags": [
+        "java",
+        "spring-boot",
+        "spring-cloud",
+        "spring-cloud-netflix",
+        "spring-cloud-feign"
+      ],
+      "view_count": 635,
+      "up_vote_count": 2,
+      "last_activity_date": 1684544112,
+      "question_id": 71854009
+    },
+    {
+      "tags": [
+        "java",
+        "jpa"
+      ],
+      "view_count": 12,
+      "up_vote_count": 0,
+      "last_activity_date": 1684542718,
+      "question_id": 76293096
+    }
+  ]
+}

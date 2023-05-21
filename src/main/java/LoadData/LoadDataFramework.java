@@ -24,7 +24,8 @@ public class LoadDataFramework {
         String dataPath = "src/main/java/LoadData/Data/";
         //catchQuestion(n, dataPath);
         //catchAnswer(n, dataPath);
-        catchTag(n,dataPath);
+//        catchTag(n,dataPath);
+        catchThread(n,dataPath);
     }
 
     public static void catchQuestion(int n, String dataPath) throws IOException {
@@ -96,7 +97,7 @@ public class LoadDataFramework {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         for (int i = 1; i <= n; i++) {
             // 创建 HttpGet 请求
-            String url = "/2.3//2.3/questions?page="+i+"&pagesize=100&order=desc&sort=activity&tagged=java&site=stackoverflow&filter=!*1PUVE3cpk6094nMNvnxLUHpqy_q(1*f*jeuA7T3K";
+            String url = "https://api.stackexchange.com/2.3/questions?page="+i+"&pagesize=100&order=desc&sort=activity&tagged=java&site=stackoverflow&filter=!*1PUVE3cpk6094nMNvnxLUHpqy_q(1*f*jeuA7T3K";
             HttpGet httpGet = new HttpGet(url);
             // 发送请求并获取响应
             CloseableHttpResponse response = httpClient.execute(httpGet);
@@ -105,6 +106,29 @@ public class LoadDataFramework {
             response.close();
             // 将字符串写入 JSON 文件
             String filePath = dataPath + "Tag/Tag"+ i + ".json";
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+                writer.write(htmlContent);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        httpClient.close();
+    }
+
+    public static void catchThread(int n, String dataPath) throws IOException {
+        // 创建 HttpClient 实例
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+        for (int i = 1; i <= n; i++) {
+            // 创建 HttpGet 请求
+            String url = "https://api.stackexchange.com/2.3/questions?page="+i+"&pagesize=100&order=desc&sort=activity&tagged=java&site=stackoverflow&filter=!2(Z4fEMyJHZi.R7_kQ2)IPyBBldeuPnlHkBlj0VkBQR.y73aPK5uJ3x.HXorxJgZivx";
+            HttpGet httpGet = new HttpGet(url);
+            // 发送请求并获取响应
+            CloseableHttpResponse response = httpClient.execute(httpGet);
+            String htmlContent = EntityUtils.toString(response.getEntity());
+            // 关闭 HttpClient 和响应
+            response.close();
+            // 将字符串写入 JSON 文件
+            String filePath = dataPath + "Thread/Thread"+ i + ".json";
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
                 writer.write(htmlContent);
             } catch (IOException e) {

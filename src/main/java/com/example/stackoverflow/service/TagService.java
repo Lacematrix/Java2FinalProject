@@ -1,13 +1,10 @@
 package com.example.stackoverflow.service;
 
-import LoadData.DataClass.QuestionLoad;
 import LoadData.DataClass.TagLoad;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.example.stackoverflow.model.Question;
 import com.example.stackoverflow.model.Tag;
-import com.example.stackoverflow.repository.QuestionRepository;
 import com.example.stackoverflow.repository.TagRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,15 +22,16 @@ public class TagService {
   public TagService(TagRepository tagRepository) {
     this.tagRepository = tagRepository;
   }
-  public List<Tag> getMostUsedTags(){
+
+  public List<Tag> getMostUsedTags(){// TODO: 2023/5/21  front end. method return 5 most relevant tags(objects)
     return tagRepository.findMostUsedTags();
   }
 
-  public Tag getTopUpvotedTag(int size){
-    return tagRepository.findTopBySizeOrderByUpvoteDesc(size);
+  public Tag getTopUpvotedTag(int size){// TODO: 2023/5/21  front end. method return most upvote tagCombination(object) with the input size, it is recommend to display size 2 to 4
+    return tagRepository.findMaxUpvote(size);
   }
-  public Tag getTopViewTag(int size){
-    return tagRepository.findTopBySizeOrderByViewDesc(size);
+  public Tag getTopViewTag(int size){// TODO: 2023/5/21  front end. method return most view tagCombination(object) with the input size, it is recommend to display size 2 to 4
+    return tagRepository.findMaxView(size);
   }
 
 

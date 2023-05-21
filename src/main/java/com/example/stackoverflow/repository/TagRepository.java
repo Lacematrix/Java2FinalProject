@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
-import java.util.Optional;
 
 
 public interface TagRepository extends JpaRepository<Tag, Long>{
@@ -15,9 +14,11 @@ public interface TagRepository extends JpaRepository<Tag, Long>{
   @Query("SELECT e.tagCombination,e.num FROM Tag e WHERE e.size=1 ORDER BY e.num DESC LIMIT 5")
   List<Tag> findMostUsedTags();
 
- Tag findTopBySizeOrderByUpvoteDesc(Integer size);
+  @Query("SELECT e.tagCombination,e.upvote FROM Tag e WHERE e.size=:size ORDER BY e.upvote DESC LIMIT 1")
+ Tag findMaxUpvote(@Param("size") Integer size);
 
- Tag findTopBySizeOrderByViewDesc(Integer size);
+  @Query("SELECT e.tagCombination,e.view FROM Tag e WHERE e.size=:size ORDER BY e.view DESC LIMIT 1")
+ Tag findMaxView(@Param("size") Integer size);
 
 
 }

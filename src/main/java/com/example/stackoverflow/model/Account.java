@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table
-public class User {
+public class Account {
   @Id
   @GeneratedValue
   private Long id;

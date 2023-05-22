@@ -23,24 +23,25 @@ public class TagService {
     this.tagRepository = tagRepository;
   }
 
-  public List<Tag> getMostUsedTags(){// TODO: 2023/5/21  front end. method return 5 most relevant tags(objects)
+  public List<Tag> getMostUsedTags() {
     return tagRepository.findMostUsedTags();
   }
 
-  public Tag getTopUpvotedTag(int size){// TODO: 2023/5/21  front end. method return most upvote tagCombination(object) with the input size, it is recommend to display size 2 to 4
+  public Tag getTopUpvotedTag(int size) {
     return tagRepository.findMaxUpvote(size);
   }
-  public Tag getTopViewTag(int size){// TODO: 2023/5/21  front end. method return most view tagCombination(object) with the input size, it is recommend to display size 2 to 4
+
+  public Tag getTopViewTag(int size) {
     return tagRepository.findMaxView(size);
   }
 
 
-  public void saveTags(String tagCombination,int size,int view,int upvote){
+  public void saveTags(String tagCombination, int size, int view, int upvote) {
     Tag tag = tagRepository.getTagByTagCombination(tagCombination);
     if (tag != null) {
       tag.setNum(tag.getNum() + 1);
-      tag.setView(tag.getView()+view);
-      tag.setUpvote(tag.getUpvote()+upvote);
+      tag.setView(tag.getView() + view);
+      tag.setUpvote(tag.getUpvote() + upvote);
     } else {
       Tag newTag = new Tag();
       newTag.setTagCombination(tagCombination);
@@ -59,22 +60,21 @@ public class TagService {
       JSONArray itemsArray = jsonObject.getJSONArray("items");
       List<TagLoad> tagdata = itemsArray.toJavaList(TagLoad.class);
       for (TagLoad q : tagdata) {
-        StringBuilder stringBuilder=new StringBuilder();
-        List<String> tags=q.getTags();
-        for (int j=0;j<tags.size();j++){
-          String curTag=tags.get(j);
-          if (!curTag.equals("java")){
-            saveTags(curTag,1,q.getView_count(),q.getUp_vote_count());
+        StringBuilder stringBuilder = new StringBuilder();
+        List<String> tags = q.getTags();
+        for (int j = 0; j < tags.size(); j++) {
+          String curTag = tags.get(j);
+          if (!curTag.equals("java")) {
+            saveTags(curTag, 1, q.getView_count(), q.getUp_vote_count());
           }
-          if (j!=tags.size()-1){
+          if (j != tags.size() - 1) {
             stringBuilder.append(curTag).append(",");
-          }
-          else{
+          } else {
             stringBuilder.append(curTag);
           }
         }
-        String tagCombination=stringBuilder.toString();
-        saveTags(tagCombination,tags.size(),q.getView_count(),q.getUp_vote_count());
+        String tagCombination = stringBuilder.toString();
+        saveTags(tagCombination, tags.size(), q.getView_count(), q.getUp_vote_count());
       }
     }
   }

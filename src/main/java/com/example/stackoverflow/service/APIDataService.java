@@ -31,9 +31,10 @@ public class APIDataService {
     this.apiDataRepository = apiDataRepository;
   }
 
-  public List<APIData> getTop5API(){// TODO: 2023/5/21 front end should display top 5 api. this method return Top5 APIData objects,whose apiName and type shuold be displayed.
+  public List<APIData> getTop5API() {
     return apiDataRepository.findMax5API();
   }
+
   public void saveAPI(String apiName, int cnt, String type) {
     APIData apiData = apiDataRepository.getAPIDataByName(apiName);
     if (apiData != null) {
@@ -48,7 +49,7 @@ public class APIDataService {
   }
 
   public void regexManage(String input) {
-    String patternString = "<pre><code>(.*?)</code></pre>";
+    String patternString = "(?s)<pre><code>(.*?)</code></pre>";
     Pattern pattern = Pattern.compile(patternString);
     Matcher matcher = pattern.matcher(input);
     JavaParser jp = new JavaParser();
@@ -77,7 +78,7 @@ public class APIDataService {
   }
 
 
-  public void addUserAndThread(int n) throws IOException {
+  public void addAPIData(int n) throws IOException {
     for (int i = 1; i <= n; i++) {
       String jsonStrings = Files.readString(Path.of("src/main/java/LoadData/Data/APIData/APIData" + i + ".json"));
       JSONObject jsonObject = JSON.parseObject(jsonStrings);
@@ -89,14 +90,20 @@ public class APIDataService {
         String questionBody = q.getBody();
         regexManage(questionBody);
 
-        for (CommentData x : questionComments) {
-          regexManage(x.getBody());
-        }
-        for (AnsData x : ansDataList) {
-          regexManage(x.getBody());
-          List<CommentData> answerComments = x.getComments();
-          for (CommentData c : answerComments) {
+        if (questionComments != null) {
+          for (CommentData x : questionComments) {
             regexManage(x.getBody());
+          }
+        }
+        if (ansDataList != null) {
+          for (AnsData x : ansDataList) {
+            regexManage(x.getBody());
+            List<CommentData> answerComments = x.getComments();
+            if (answerComments != null) {
+              for (CommentData c : answerComments) {
+                regexManage(x.getBody());
+              }
+            }
           }
         }
       }
@@ -113,17 +120,16 @@ class CodeVisitor extends VoidVisitorAdapter<Void> {
     super.visit(cls, arg);
 
     // 统计类的出现次数
-    String className = cls.getNameAsString();
+    String className = cls.getFullyQualifiedName().orElse("");
     classCount.put(className, classCount.getOrDefault(className, 0) + 1);
-  }
+    for (MethodDeclaration method : cls.getMethods()) {
+      // 获取方法名
+      String methodName = method.getNameAsString();
 
-  @Override
-  public void visit(MethodDeclaration method, Void arg) {
-    super.visit(method, arg);
-
-    // 统计方法的出现次数
-    String methodName = method.getNameAsString();
-    methodCount.put(methodName, methodCount.getOrDefault(methodName, 0) + 1);
+      // 构建方法的全限定名
+      String fullMethodName = className + "." + methodName;
+      methodCount.put(fullMethodName, methodCount.getOrDefault(fullMethodName, 0) + 1);
+    }
   }
 
   public Map<String, Integer> getClassCount() {

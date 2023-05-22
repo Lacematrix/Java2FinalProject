@@ -9,6 +9,6 @@ import java.util.List;
 public interface APIDataRepository extends JpaRepository<APIData, Long> {
   APIData getAPIDataByName(String name);
 
-  @Query("select e.name,e.cnt,e.type from APIData e order by e.cnt limit 5")
+  @Query(value = "select e.name,e.cnt,e.type from APIData e order by e.cnt desc limit 5", nativeQuery = true)
   List<APIData> findMax5API();
 }

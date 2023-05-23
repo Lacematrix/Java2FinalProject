@@ -44,13 +44,22 @@ public class UserService {
       accountRepository.save(newAccount);
     }
   }
-
-  public double getAvgAnsPercent() {
-    return threadRepository.findAvgAnswerCnt();
+  public Double getAvgAns(){
+    return threadRepository.findAvgAns();
+  }
+  public Double getAvgComment(){
+    return threadRepository.findAvgComment();
+  }
+  public List<Integer> getAnsCnt() {
+    return threadRepository.findAnswerCnt();
   }
 
-  public double getAvgCommentPercent() {
-    return threadRepository.findAvgCommentCnt();
+  public List<Integer> getCommentCnt() {
+    return threadRepository.findCommentCnt();
+  }
+
+  public List<Integer> getThreadCnt(){
+    return threadRepository.findThreadCnt();
   }
 
   public List<Account> getActiveUser() {

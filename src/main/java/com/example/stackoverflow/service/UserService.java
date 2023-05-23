@@ -46,11 +46,11 @@ public class UserService {
   }
 
   public double getAvgAnsPercent() {
-    return threadRepository.findAvgAnsPercent();
+    return threadRepository.findAvgAnswerCnt();
   }
 
   public double getAvgCommentPercent() {
-    return threadRepository.findAvgCommentPercent();
+    return threadRepository.findAvgCommentCnt();
   }
 
   public List<Account> getActiveUser() {

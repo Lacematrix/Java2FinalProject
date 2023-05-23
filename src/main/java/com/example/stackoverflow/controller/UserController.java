@@ -28,7 +28,7 @@ public class UserController {
     double commentPercent= userService.getAvgCommentPercent();
       userDistribution.put("Answer",answerPercent);
       userDistribution.put("Comment",commentPercent);
-      userDistribution.put("Question",1-answerPercent-commentPercent);
+      userDistribution.put("Question",1D);
     return ResponseEntity.ok(userDistribution);
   }
 

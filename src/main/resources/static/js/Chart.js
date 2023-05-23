@@ -98,10 +98,10 @@ function creatWordCloud(div, wordcloudRaw, name) {
       shape: {
         cloudGrow: 0.2
       },
-      sizeRange: [10, 60],
+      sizeRange: [10, 30],
       rotationRange: [-30, 30],
       gridSize: 2,
-      drawOutOfBound: false,
+      drawOutOfBound: true,
       layoutAnimation: true,
       keepAspect: true,
       textStyle: {

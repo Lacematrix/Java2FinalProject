@@ -3,6 +3,7 @@ package LoadData.DataClass;
 import java.util.List;
 
 public class TagLoad {
+
   private List<String> tags;
   private int view_count;
   private int up_vote_count;

@@ -7,8 +7,11 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface AccountRepository extends JpaRepository<Account, Long>, JpaSpecificationExecutor<Account> {
+public interface AccountRepository extends JpaRepository<Account, Long>,
+    JpaSpecificationExecutor<Account> {
+
   Account getAccountByUserid(Long userId);
-//  @Query(value="SELECT user_Name,join_Cnt FROM Account ORDER BY join_Cnt DESC LIMIT 5",nativeQuery = true)
+
+  //  @Query(value="SELECT user_Name,join_Cnt FROM Account ORDER BY join_Cnt DESC LIMIT 5",nativeQuery = true)
   List<Account> findTop5ByOrderByJoincntDesc();
 }

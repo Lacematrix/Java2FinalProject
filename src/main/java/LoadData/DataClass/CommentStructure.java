@@ -1,6 +1,7 @@
 package LoadData.DataClass;
 
 public class CommentStructure {
+
   private UserStructure owner;
   private Long comment_id;
 

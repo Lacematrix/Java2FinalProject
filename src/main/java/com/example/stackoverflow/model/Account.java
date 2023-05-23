@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table
 public class Account {
+
   @Id
   @GeneratedValue
   private Long id;

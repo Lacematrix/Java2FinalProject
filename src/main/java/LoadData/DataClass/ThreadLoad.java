@@ -3,6 +3,7 @@ package LoadData.DataClass;
 import java.util.List;
 
 public class ThreadLoad {
+
   private UserStructure owner;
   private List<String> tags;
   private List<AnswerStructure> answers;

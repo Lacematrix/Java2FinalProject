@@ -3,6 +3,7 @@ package LoadData.DataClass;
 import java.util.List;
 
 public class AnsData {
+
   private List<CommentData> comments;
   private String body;
   private Long answer_id;

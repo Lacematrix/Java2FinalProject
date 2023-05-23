@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface ThreadRepository extends JpaRepository<Thread, Long> {
+
   @Query("select e.ans_Cnt from Thread e")
   List<Integer> findAnswerCnt();
 

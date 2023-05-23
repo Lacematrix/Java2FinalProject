@@ -1,85 +1,85 @@
 #menu {
-    float: right;
-    position: relative;
-    width: 75%;
-    height: 80%;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
+  float: right;
+  position: relative;
+  width: 75%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
 }
 
-#information {
-    float: left;
-    position: relative;
-    left: 3.33%;
-    width: 80%;
-    height: 80%;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
+.information {
+  float: left;
+  position: relative;
+  left: 3.33%;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
 }
 
 #left-answer {
-    float: left;
-    position: relative;
-    width: 50%;
-    height: 100%;
-    border-radius: 20px;
-    background-color: transparent;
+  float: left;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: transparent;
 }
 
 #right-answer {
-    float: left;
-    position: relative;
-    width: 50%;
-    height: 100%;
-    background-color: transparent;
+  float: left;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: transparent;
 }
 
 #center-top-answer {
-    position: relative;
-    width: 100%;
-    height: 50%;
-    border-radius: 20px;
-    background-color: transparent;
+  position: relative;
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+  background-color: transparent;
 }
 
 #center-bottom-answer {
-    position: relative;
-    width: 100%;
-    height: 50%;
-    border-radius: 20px;
-    background-color: transparent;
+  position: relative;
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+  background-color: transparent;
 }
 
 #buttonList {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
 .ui-button {
-    width: 80%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    flex-grow: 1;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    background-position: left;
-    border-color: transparent;
-    border-radius: 20px;
-    font-size: 20px;
-    font-family: "Times New Roman", serif;
+  width: 80%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  flex-grow: 1;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-position: left;
+  border-color: transparent;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: "Times New Roman", serif;
 }
 
 .ui-button:hover {
-    background-color: rgba(27, 135, 246, 0.3);
+  background-color: rgba(27, 135, 246, 0.3);
 }
 
 .ui-button:active {
-    background-color: rgba(246, 27, 27, 0.3);
+  background-color: rgba(246, 27, 27, 0.3);
 }
 
 #answer {

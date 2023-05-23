@@ -1,4 +1,5 @@
 package com.example.stackoverflow.model;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,6 +15,7 @@ public class APIData {
   private String name;
   private int cnt;
   private String type;
+
   public void setId(Long id) {
     this.id = id;
   }

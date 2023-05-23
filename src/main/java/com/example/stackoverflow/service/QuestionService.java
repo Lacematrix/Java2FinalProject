@@ -16,45 +16,50 @@ import java.util.List;
 
 @Service
 public class QuestionService {
-    private final QuestionRepository questionRepository;
 
-    @Autowired
-    public QuestionService(QuestionRepository questionRepository) {
-        this.questionRepository = questionRepository;
-    }
+  private final QuestionRepository questionRepository;
 
-    public long[] getUnacceptedQuestionCount() {
-        return new long[] {questionRepository.countByIsAnswered(false), questionRepository.countByIsAnswered(true)};
-    }
+  @Autowired
+  public QuestionService(QuestionRepository questionRepository) {
+    this.questionRepository = questionRepository;
+  }
 
-    public double[] getAvgAndMax(){
-        return new double[] {questionRepository.findAvgValue(),questionRepository.findMaxValue()};
-    }
+  public long[] getUnacceptedQuestionCount() {
+    return new long[]{questionRepository.countByIsAnswered(false),
+        questionRepository.countByIsAnswered(true)};
+  }
 
-    public List<Object[]> getDistribution(){
-        return questionRepository.findDistribution();
-    }
+  public double[] getAvgAndMax() {
+    return new double[]{questionRepository.findAvgValue(), questionRepository.findMaxValue()};
+  }
 
-    public List<Question> getAllQuestion(){
-        return questionRepository.findAll();
-    }
+  public List<Object[]> getDistribution() {
+    return questionRepository.findDistribution();
+  }
 
-    public long getNumberOfQuestion(){
-        return questionRepository.count();
-    }
+  public List<Question> getAllQuestion() {
+    return questionRepository.findAll();
+  }
 
-    public void addQuestion(int n) throws IOException {
-        for (int i = 1; i <= n; i++) {
-            String jsonStrings = Files.readString(Path.of("src/main/java/LoadData/Data/Question/Question" + i + ".json"));
-            JSONObject jsonObject = JSON.parseObject(jsonStrings);
-            JSONArray itemsArray = jsonObject.getJSONArray("items");
-            List<QuestionLoad> questions = itemsArray.toJavaList(QuestionLoad.class);
-            for (QuestionLoad q : questions) {
-                Question question = new Question(q.isIs_answered(), q.getView_count(), q.getAccepted_answer_id(),
-                        q.getAnswer_count(), q.getScore(), q.getLast_activity_date(), q.getCreation_date(), q.getLast_edit_date(), q.getQuestion_id(),
-                        q.getContent_license(), q.getLink(), q.getTitle());
-                questionRepository.save(question);
-            }
-        }
+  public long getNumberOfQuestion() {
+    return questionRepository.count();
+  }
+
+  public void addQuestion(int n) throws IOException {
+    for (int i = 1; i <= n; i++) {
+      String jsonStrings = Files.readString(
+          Path.of("src/main/java/LoadData/Data/Question/Question" + i + ".json"));
+      JSONObject jsonObject = JSON.parseObject(jsonStrings);
+      JSONArray itemsArray = jsonObject.getJSONArray("items");
+      List<QuestionLoad> questions = itemsArray.toJavaList(QuestionLoad.class);
+      for (QuestionLoad q : questions) {
+        Question question = new Question(q.isIs_answered(), q.getView_count(),
+            q.getAccepted_answer_id(),
+            q.getAnswer_count(), q.getScore(), q.getLast_activity_date(), q.getCreation_date(),
+            q.getLast_edit_date(), q.getQuestion_id(),
+            q.getContent_license(), q.getLink(), q.getTitle());
+        questionRepository.save(question);
+      }
     }
+  }
 }

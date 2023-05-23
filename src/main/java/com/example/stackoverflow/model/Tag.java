@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table
 public class Tag {
+
   @Id
   @GeneratedValue
   private Long id;
@@ -13,6 +14,7 @@ public class Tag {
   private Integer num;
   private Integer upvote;
   private Integer view;
+
   public void setId(Long id) {
     this.id = id;
   }

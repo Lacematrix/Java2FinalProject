@@ -22,6 +22,7 @@ import java.util.List;
 
 @Service
 public class UserService {
+
   private ThreadRepository threadRepository;
   private AccountRepository accountRepository;
 
@@ -44,12 +45,15 @@ public class UserService {
       accountRepository.save(newAccount);
     }
   }
-  public Double getAvgAns(){
+
+  public Double getAvgAns() {
     return threadRepository.findAvgAns();
   }
-  public Double getAvgComment(){
+
+  public Double getAvgComment() {
     return threadRepository.findAvgComment();
   }
+
   public List<Integer> getAnsCnt() {
     return threadRepository.findAnswerCnt();
   }
@@ -58,7 +62,7 @@ public class UserService {
     return threadRepository.findCommentCnt();
   }
 
-  public List<Integer> getThreadCnt(){
+  public List<Integer> getThreadCnt() {
     return threadRepository.findThreadCnt();
   }
 
@@ -68,7 +72,8 @@ public class UserService {
 
   public void addUserAndThread(int n) throws IOException {
     for (int i = 1; i <= n; i++) {
-      String jsonStrings = Files.readString(Path.of("src/main/java/LoadData/Data/Thread/Thread" + i + ".json"));
+      String jsonStrings = Files.readString(
+          Path.of("src/main/java/LoadData/Data/Thread/Thread" + i + ".json"));
       JSONObject jsonObject = JSON.parseObject(jsonStrings);
       JSONArray itemsArray = jsonObject.getJSONArray("items");
       List<ThreadLoad> threadData = itemsArray.toJavaList(ThreadLoad.class);
@@ -99,9 +104,11 @@ public class UserService {
         }
         Thread thread = new Thread();
         thread.setAns_Cnt(answerSet.size());
-        thread.setAns_Percent((double)answerSet.size() / (double)(1 + answerSet.size() + commentSet.size()));
+        thread.setAns_Percent(
+            (double) answerSet.size() / (double) (1 + answerSet.size() + commentSet.size()));
         thread.setComment_Cnt(commentSet.size());
-        thread.setComment_Percent((double)commentSet.size() /(double) (1 + answerSet.size() + commentSet.size()));
+        thread.setComment_Percent(
+            (double) commentSet.size() / (double) (1 + answerSet.size() + commentSet.size()));
         threadRepository.save(thread);
       }
     }

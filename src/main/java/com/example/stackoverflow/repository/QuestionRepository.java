@@ -8,17 +8,18 @@ import java.util.List;
 import java.util.Map;
 
 public interface QuestionRepository extends JpaRepository<Question, Long> {
-    long countByIsAnswered(boolean isAnswered);
 
-    long count();
+  long countByIsAnswered(boolean isAnswered);
 
-    @Query("SELECT MAX(e.answerCount) FROM Question e")
-    double findMaxValue();
+  long count();
 
-    @Query("SELECT AVG(e.answerCount) FROM Question e")
-    double findAvgValue();
+  @Query("SELECT MAX(e.answerCount) FROM Question e")
+  double findMaxValue();
 
-    @Query("SELECT e.answerCount, count (e) from Question e group by e.answerCount")
-    List<Object[]> findDistribution();
+  @Query("SELECT AVG(e.answerCount) FROM Question e")
+  double findAvgValue();
+
+  @Query("SELECT e.answerCount, count (e) from Question e group by e.answerCount")
+  List<Object[]> findDistribution();
 
 }

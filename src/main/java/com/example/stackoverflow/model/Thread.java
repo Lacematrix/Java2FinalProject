@@ -1,9 +1,11 @@
 package com.example.stackoverflow.model;
+
 import javax.persistence.*;
 
 @Entity
 @Table
 public class Thread {
+
   @Id
   @GeneratedValue
   private Long id;

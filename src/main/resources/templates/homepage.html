@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>homepage</title>
-    <link rel="stylesheet" type="text/css" href="../css/GlobalStyle.css">
-    <link rel="stylesheet" type="text/css" href="../css/ComponentStyle.css">
-    <script src='./js/ButtonFunction.js'></script>
+  <meta charset="UTF-8">
+  <title>homepage</title>
+  <link rel="stylesheet" type="text/css" href="../css/GlobalStyle.css">
+  <link rel="stylesheet" type="text/css" href="../css/ComponentStyle.css">
+  <script src='./js/ButtonFunction.js'></script>
 </head>
 <body>
 <div id="container">
-    <div id="title">
-        <h1 id="titleContext">Stack Overflow</h1>
+  <div id="title">
+    <h1 id="titleContext">Stack Overflow</h1>
+  </div>
+  <div id="mainContent">
+    <div id="LBox">
+      <div id="menu">
+        <ul id="buttonList">
+          <button id="answer" class="ui-button" onclick="getAnswerNumber()">Answer</button>
+          <button id="accept" class="ui-button" onclick="getAcceptAnswer()">Accept</button>
+          <button id="tag" class="ui-button" onclick="getTags()">Tag</button>
+          <button id="account" class="ui-button" onclick="getUsers()">User</button>
+          <button id="user" class="ui-button" onclick="getUsersDistribution()">User</button>
+          <button id="API" class="ui-button" onclick="getAPI()">API</button>
+        </ul>
+      </div>
     </div>
-    <div id="mainContent">
-        <div id="LBox">
-            <div id="menu">
-                <ul id="buttonList">
-                    <button id="answer" class="ui-button" onclick="getAnswerNumber()">Answer</button>
-                    <button id="accept" class="ui-button" onclick="getAcceptAnswer()">Accept</button>
-                    <button id="tag" class="ui-button">Tag</button>
-                    <button id="account" class="ui-button">User</button>
-                </ul>
-            </div>
+    <div id="RBox" class="RBox">
+      <div id="information" class="information">
+        <div id="left-answer"></div>
+        <div id="right-answer">
+          <div id="center-top-answer"></div>
+          <div id="center-bottom-answer"></div>
         </div>
-        <div id="RBox">
-            <div id="information">
-                <div id="left-answer"></div>
-                <div id="right-answer">
-                    <div id="center-top-answer"></div>
-                    <div id="center-bottom-answer"></div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
 
 </body>

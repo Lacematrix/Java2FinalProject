@@ -3,49 +3,50 @@ package LoadData.DataClass;
 import java.util.List;
 
 public class APILoad {
-    private List<AnsData> answers;
-    private List<CommentData> comments;
-    private Long last_activity_date;
-    private Long question_id;
-    private String body;
 
-    public List<AnsData> getAnswers() {
-        return answers;
-    }
+  private List<AnsData> answers;
+  private List<CommentData> comments;
+  private Long last_activity_date;
+  private Long question_id;
+  private String body;
 
-    public List<CommentData> getComments() {
-        return comments;
-    }
+  public List<AnsData> getAnswers() {
+    return answers;
+  }
 
-    public Long getLast_activity_date() {
-        return last_activity_date;
-    }
+  public List<CommentData> getComments() {
+    return comments;
+  }
 
-    public Long getQuestion_id() {
-        return question_id;
-    }
+  public Long getLast_activity_date() {
+    return last_activity_date;
+  }
 
-    public String getBody() {
-        return body;
-    }
+  public Long getQuestion_id() {
+    return question_id;
+  }
 
-    public void setAnswers(List<AnsData> answers) {
-        this.answers = answers;
-    }
+  public String getBody() {
+    return body;
+  }
 
-    public void setComments(List<CommentData> comments) {
-        this.comments = comments;
-    }
+  public void setAnswers(List<AnsData> answers) {
+    this.answers = answers;
+  }
 
-    public void setLast_activity_date(Long last_activity_date) {
-        this.last_activity_date = last_activity_date;
-    }
+  public void setComments(List<CommentData> comments) {
+    this.comments = comments;
+  }
 
-    public void setQuestion_id(Long question_id) {
-        this.question_id = question_id;
-    }
+  public void setLast_activity_date(Long last_activity_date) {
+    this.last_activity_date = last_activity_date;
+  }
 
-    public void setBody(String body) {
-        this.body = body;
-    }
+  public void setQuestion_id(Long question_id) {
+    this.question_id = question_id;
+  }
+
+  public void setBody(String body) {
+    this.body = body;
+  }
 }

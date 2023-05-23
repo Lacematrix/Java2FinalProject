@@ -5,157 +5,160 @@ import javax.persistence.*;
 @Entity
 @Table
 public class Question {
-    @Id
-    @GeneratedValue
-    private Long ID;
-    private boolean isAnswered;
-    private int viewCount;
-    private int acceptedAnswerId;
-    private int answerCount;
-    private int score;
-    private long lastActivityDate;
-    private long creationDate;
-    private long lastEditDate;
-    private long questionId;
-    private String contentLicense;
-    private String link;
-    private String title;
 
-    public Question(boolean is_answered, int view_count, int accepted_answer_id, int answer_count, int score, long last_activity_date, long creation_date, long last_edit_date, long question_id, String content_license, String link, String title) {
-        this.isAnswered = is_answered;
-        this.viewCount = view_count;
-        this.acceptedAnswerId = accepted_answer_id;
-        this.answerCount = answer_count;
-        this.score = score;
-        this.lastActivityDate = last_activity_date;
-        this.creationDate = creation_date;
-        this.lastEditDate = last_edit_date;
-        this.questionId = question_id;
-        this.contentLicense = content_license;
-        this.link = link;
-        this.title = title;
-    }
+  @Id
+  @GeneratedValue
+  private Long ID;
+  private boolean isAnswered;
+  private int viewCount;
+  private int acceptedAnswerId;
+  private int answerCount;
+  private int score;
+  private long lastActivityDate;
+  private long creationDate;
+  private long lastEditDate;
+  private long questionId;
+  private String contentLicense;
+  private String link;
+  private String title;
 
-    public Question() {
+  public Question(boolean is_answered, int view_count, int accepted_answer_id, int answer_count,
+      int score, long last_activity_date, long creation_date, long last_edit_date, long question_id,
+      String content_license, String link, String title) {
+    this.isAnswered = is_answered;
+    this.viewCount = view_count;
+    this.acceptedAnswerId = accepted_answer_id;
+    this.answerCount = answer_count;
+    this.score = score;
+    this.lastActivityDate = last_activity_date;
+    this.creationDate = creation_date;
+    this.lastEditDate = last_edit_date;
+    this.questionId = question_id;
+    this.contentLicense = content_license;
+    this.link = link;
+    this.title = title;
+  }
 
-    }
+  public Question() {
 
-    public boolean isAnswered() {
-        return isAnswered;
-    }
+  }
 
-    public int getViewCount() {
-        return viewCount;
-    }
+  public boolean isAnswered() {
+    return isAnswered;
+  }
 
-    public int getAcceptedAnswerId() {
-        return acceptedAnswerId;
-    }
+  public int getViewCount() {
+    return viewCount;
+  }
 
-    public int getAnswerCount() {
-        return answerCount;
-    }
+  public int getAcceptedAnswerId() {
+    return acceptedAnswerId;
+  }
 
-    public int getScore() {
-        return score;
-    }
+  public int getAnswerCount() {
+    return answerCount;
+  }
 
-    public long getLastActivityDate() {
-        return lastActivityDate;
-    }
+  public int getScore() {
+    return score;
+  }
 
-    public long getCreationDate() {
-        return creationDate;
-    }
+  public long getLastActivityDate() {
+    return lastActivityDate;
+  }
 
-    public long getLastEditDate() {
-        return lastEditDate;
-    }
+  public long getCreationDate() {
+    return creationDate;
+  }
 
-    public long getQuestionId() {
-        return questionId;
-    }
+  public long getLastEditDate() {
+    return lastEditDate;
+  }
 
-    public String getContentLicense() {
-        return contentLicense;
-    }
+  public long getQuestionId() {
+    return questionId;
+  }
 
-    public String getLink() {
-        return link;
-    }
+  public String getContentLicense() {
+    return contentLicense;
+  }
 
-    public String getTitle() {
-        return title;
-    }
+  public String getLink() {
+    return link;
+  }
 
-    public void setID(Long ID) {
-        this.ID = ID;
-    }
+  public String getTitle() {
+    return title;
+  }
 
-    public void setAnswered(boolean answered) {
-        isAnswered = answered;
-    }
+  public void setID(Long ID) {
+    this.ID = ID;
+  }
 
-    public void setViewCount(int viewCount) {
-        this.viewCount = viewCount;
-    }
+  public void setAnswered(boolean answered) {
+    isAnswered = answered;
+  }
 
-    public void setAcceptedAnswerId(int acceptedAnswerId) {
-        this.acceptedAnswerId = acceptedAnswerId;
-    }
+  public void setViewCount(int viewCount) {
+    this.viewCount = viewCount;
+  }
 
-    public void setAnswerCount(int answerCount) {
-        this.answerCount = answerCount;
-    }
+  public void setAcceptedAnswerId(int acceptedAnswerId) {
+    this.acceptedAnswerId = acceptedAnswerId;
+  }
 
-    public void setScore(int score) {
-        this.score = score;
-    }
+  public void setAnswerCount(int answerCount) {
+    this.answerCount = answerCount;
+  }
 
-    public void setLastActivityDate(long lastActivityDate) {
-        this.lastActivityDate = lastActivityDate;
-    }
+  public void setScore(int score) {
+    this.score = score;
+  }
 
-    public void setCreationDate(long creationDate) {
-        this.creationDate = creationDate;
-    }
+  public void setLastActivityDate(long lastActivityDate) {
+    this.lastActivityDate = lastActivityDate;
+  }
 
-    public void setLastEditDate(long lastEditDate) {
-        this.lastEditDate = lastEditDate;
-    }
+  public void setCreationDate(long creationDate) {
+    this.creationDate = creationDate;
+  }
 
-    public void setQuestionId(long questionId) {
-        this.questionId = questionId;
-    }
+  public void setLastEditDate(long lastEditDate) {
+    this.lastEditDate = lastEditDate;
+  }
 
-    public void setContentLicense(String contentLicense) {
-        this.contentLicense = contentLicense;
-    }
+  public void setQuestionId(long questionId) {
+    this.questionId = questionId;
+  }
 
-    public void setLink(String link) {
-        this.link = link;
-    }
+  public void setContentLicense(String contentLicense) {
+    this.contentLicense = contentLicense;
+  }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+  public void setLink(String link) {
+    this.link = link;
+  }
 
-    @Override
-    public String toString() {
-        return "Question{" +
-                "ID=" + ID +
-                ", is_answered=" + isAnswered +
-                ", view_count=" + viewCount +
-                ", accepted_answer_id=" + acceptedAnswerId +
-                ", answer_count=" + answerCount +
-                ", score=" + score +
-                ", last_activity_date=" + lastActivityDate +
-                ", creation_date=" + creationDate +
-                ", last_edit_date=" + lastEditDate +
-                ", question_id=" + questionId +
-                ", content_license='" + contentLicense + '\'' +
-                ", link='" + link + '\'' +
-                ", title='" + title + '\'' +
-                '}';
-    }
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  @Override
+  public String toString() {
+    return "Question{" +
+        "ID=" + ID +
+        ", is_answered=" + isAnswered +
+        ", view_count=" + viewCount +
+        ", accepted_answer_id=" + acceptedAnswerId +
+        ", answer_count=" + answerCount +
+        ", score=" + score +
+        ", last_activity_date=" + lastActivityDate +
+        ", creation_date=" + creationDate +
+        ", last_edit_date=" + lastEditDate +
+        ", question_id=" + questionId +
+        ", content_license='" + contentLicense + '\'' +
+        ", link='" + link + '\'' +
+        ", title='" + title + '\'' +
+        '}';
+  }
 }

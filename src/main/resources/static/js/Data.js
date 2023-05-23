@@ -1,23 +1,25 @@
-document.write("<script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>");
+document.write(
+    "<script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>");
+
 function getData(type) {
-    let respondData;
-    $.ajax({
-        url: '/api' + type,
-        type: 'GET',
-        dataType: 'json',
-        async: false,
-        success: function(response) {
-            // 在控制台打印接收到的 JSON 数据
-            console.log(response);
-            respondData = response;
-            // 在这里编写解析和处理 JSON 数据的代码
-            // 可以使用 response 对象访问 JSON 数据的属性
-        },
-        error: function(error) {
-            console.error(error);
-        }
-    });
-    return respondData;
+  let respondData;
+  $.ajax({
+    url: '/api' + type,
+    type: 'GET',
+    dataType: 'json',
+    async: false,
+    success: function (response) {
+      // 在控制台打印接收到的 JSON 数据
+      console.log(response);
+      respondData = response;
+      // 在这里编写解析和处理 JSON 数据的代码
+      // 可以使用 response 对象访问 JSON 数据的属性
+    },
+    error: function (error) {
+      console.error(error);
+    }
+  });
+  return respondData;
 }
 
 // function getPercentageOfQuestions() {

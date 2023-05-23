@@ -3,6 +3,7 @@ package LoadData.DataClass;
 import java.util.List;
 
 public class AnswerStructure {
+
   private List<CommentStructure> comments;
   private UserStructure owner;
   private Long answer_id;

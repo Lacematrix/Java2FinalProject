@@ -24,6 +24,7 @@ import java.util.regex.Pattern;
 
 @Service
 public class APIDataService {
+
   private final APIDataRepository apiDataRepository;
 
   @Autowired
@@ -81,7 +82,8 @@ public class APIDataService {
 
   public void addAPIData(int n) throws IOException {
     for (int i = 1; i <= n; i++) {
-      String jsonStrings = Files.readString(Path.of("src/main/java/LoadData/Data/APIData/APIData" + i + ".json"));
+      String jsonStrings = Files.readString(
+          Path.of("src/main/java/LoadData/Data/APIData/APIData" + i + ".json"));
       JSONObject jsonObject = JSON.parseObject(jsonStrings);
       JSONArray itemsArray = jsonObject.getJSONArray("items");
       List<APILoad> apiLoads = itemsArray.toJavaList(APILoad.class);
@@ -113,6 +115,7 @@ public class APIDataService {
 }
 
 class CodeVisitor extends VoidVisitorAdapter<Void> {
+
   private Map<String, Integer> classCount = new HashMap<>();
   private Map<String, Integer> methodCount = new HashMap<>();
 

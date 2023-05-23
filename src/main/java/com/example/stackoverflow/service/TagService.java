@@ -16,6 +16,7 @@ import java.util.List;
 
 @Service
 public class TagService {
+
   private final TagRepository tagRepository;
 
   @Autowired
@@ -60,7 +61,8 @@ public class TagService {
 
   public void addTag(int n) throws IOException {
     for (int i = 1; i <= n; i++) {
-      String jsonStrings = Files.readString(Path.of("src/main/java/LoadData/Data/Tag/Tag" + i + ".json"));
+      String jsonStrings = Files.readString(
+          Path.of("src/main/java/LoadData/Data/Tag/Tag" + i + ".json"));
       JSONObject jsonObject = JSON.parseObject(jsonStrings);
       JSONArray itemsArray = jsonObject.getJSONArray("items");
       List<TagLoad> tagdata = itemsArray.toJavaList(TagLoad.class);

@@ -143,22 +143,4 @@ public class Question {
     this.title = title;
   }
 
-  @Override
-  public String toString() {
-    return "Question{" +
-        "ID=" + ID +
-        ", is_answered=" + isAnswered +
-        ", view_count=" + viewCount +
-        ", accepted_answer_id=" + acceptedAnswerId +
-        ", answer_count=" + answerCount +
-        ", score=" + score +
-        ", last_activity_date=" + lastActivityDate +
-        ", creation_date=" + creationDate +
-        ", last_edit_date=" + lastEditDate +
-        ", question_id=" + questionId +
-        ", content_license='" + contentLicense + '\'' +
-        ", link='" + link + '\'' +
-        ", title='" + title + '\'' +
-        '}';
-  }
 }

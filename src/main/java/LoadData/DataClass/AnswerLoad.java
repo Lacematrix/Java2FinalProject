@@ -94,18 +94,4 @@ public class AnswerLoad {
     this.content_license = content_license;
   }
 
-  @Override
-  public String toString() {
-    return "AnswerLoad{" +
-        "owner=" + owner +
-        ", is_accepted=" + is_accepted +
-        ", score=" + score +
-        ", last_activity_date=" + last_activity_date +
-        ", last_edit_date=" + last_edit_date +
-        ", creation_date=" + creation_date +
-        ", answer_id=" + answer_id +
-        ", question_id=" + question_id +
-        ", content_license='" + content_license + '\'' +
-        '}';
-  }
 }

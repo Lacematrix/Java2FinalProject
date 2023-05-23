@@ -131,24 +131,4 @@ public class QuestionLoad {
     this.title = title;
   }
 
-
-  @Override
-  public String toString() {
-    return "QuestionLoad{" +
-        "tags=" + tags +
-        ", owner=" + owner +
-        ", is_answered=" + is_answered +
-        ", view_count=" + view_count +
-        ", accepted_answer_id=" + accepted_answer_id +
-        ", answer_count=" + answer_count +
-        ", score=" + score +
-        ", last_activity_date=" + last_activity_date +
-        ", creation_date=" + creation_date +
-        ", last_edit_date=" + last_edit_date +
-        ", question_id=" + question_id +
-        ", content_license='" + content_license + '\'' +
-        ", link='" + link + '\'' +
-        ", title='" + title + '\'' +
-        '}';
-  }
 }

@@ -1,11 +1,9 @@
 package com.example.stackoverflow.repository;
 
 import com.example.stackoverflow.model.Question;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
-import java.util.List;
-import java.util.Map;
 
 public interface QuestionRepository extends JpaRepository<Question, Long> {
 

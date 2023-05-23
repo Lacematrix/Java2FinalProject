@@ -45,7 +45,7 @@ function getUsersDistribution() {
   const Q2 = getData('/User/AnsDistribution')
   const Q3 = getData('/User/commentDistribution')
   creatPiechart('left-answer', Q1, 'threadDistribution', 'threadDistribution')
-  creatPiechart('center-top-answer', Q2, 'AnsDistribution', 'AnsDistribution')
+  creatPiechart('center-top-answer', Q2, 'AnsDistribution', 'AnswerDistribution')
   creatPiechart('center-bottom-answer', Q3, 'commentDistribution',
       'commentDistribution')
 }

@@ -4,6 +4,7 @@ import LoadData.DataClass.*;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.example.stackoverflow.model.APIData;
 import com.example.stackoverflow.repository.APIDataRepository;
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ParseResult;
@@ -11,16 +12,17 @@ import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import com.example.stackoverflow.model.APIData;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+
 
 @Service
 public class APIDataService {
@@ -86,25 +88,29 @@ public class APIDataService {
           Path.of("src/main/java/LoadData/Data/APIData/APIData" + i + ".json"));
       JSONObject jsonObject = JSON.parseObject(jsonStrings);
       JSONArray itemsArray = jsonObject.getJSONArray("items");
-      List<APILoad> apiLoads = itemsArray.toJavaList(APILoad.class);
-      for (APILoad q : apiLoads) {
-        List<CommentData> questionComments = q.getComments();
-        List<AnsData> ansDataList = q.getAnswers();
-        String questionBody = q.getBody();
-        regexManage(questionBody);
+      if (itemsArray != null) {
+        List<APILoad> apiLoads = itemsArray.toJavaList(APILoad.class);
+        if (apiLoads != null) {
+          for (APILoad q : apiLoads) {
+            List<CommentData> questionComments = q.getComments();
+            List<AnsData> ansDataList = q.getAnswers();
+            String questionBody = q.getBody();
+            regexManage(questionBody);
 
-        if (questionComments != null) {
-          for (CommentData x : questionComments) {
-            regexManage(x.getBody());
-          }
-        }
-        if (ansDataList != null) {
-          for (AnsData x : ansDataList) {
-            regexManage(x.getBody());
-            List<CommentData> answerComments = x.getComments();
-            if (answerComments != null) {
-              for (CommentData c : answerComments) {
+            if (questionComments != null) {
+              for (CommentData x : questionComments) {
                 regexManage(x.getBody());
+              }
+            }
+            if (ansDataList != null) {
+              for (AnsData x : ansDataList) {
+                regexManage(x.getBody());
+                List<CommentData> answerComments = x.getComments();
+                if (answerComments != null) {
+                  for (CommentData c : answerComments) {
+                    regexManage(x.getBody());
+                  }
+                }
               }
             }
           }
@@ -124,15 +130,12 @@ class CodeVisitor extends VoidVisitorAdapter<Void> {
     super.visit(cls, arg);
 
     // 统计类的出现次数
-    String className = cls.getFullyQualifiedName().orElse("");
+    String className = cls.getNameAsString();
     classCount.put(className, classCount.getOrDefault(className, 0) + 1);
     for (MethodDeclaration method : cls.getMethods()) {
       // 获取方法名
       String methodName = method.getNameAsString();
-
-      // 构建方法的全限定名
-      String fullMethodName = className + "." + methodName;
-      methodCount.put(fullMethodName, methodCount.getOrDefault(fullMethodName, 0) + 1);
+      methodCount.put(methodName, methodCount.getOrDefault(methodName, 0) + 1);
     }
   }
 

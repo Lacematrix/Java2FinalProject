@@ -1,24 +1,24 @@
 package com.example.stackoverflow.service;
 
-import LoadData.DataClass.ThreadLoad;
-import LoadData.DataClass.UserStructure;
 import LoadData.DataClass.AnswerStructure;
 import LoadData.DataClass.CommentStructure;
-import com.example.stackoverflow.model.Thread;
+import LoadData.DataClass.ThreadLoad;
+import LoadData.DataClass.UserStructure;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.example.stackoverflow.model.Account;
-import com.example.stackoverflow.repository.ThreadRepository;
+import com.example.stackoverflow.model.Thread;
 import com.example.stackoverflow.repository.AccountRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
+import com.example.stackoverflow.repository.ThreadRepository;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashSet;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 
 @Service
 public class UserService {

@@ -112,19 +112,4 @@ public class Answer {
     this.contentLicense = contentLicense;
   }
 
-  @Override
-  public String toString() {
-    return "Answer{" +
-        "id=" + id +
-        ", upVoteCount=" + upVoteCount +
-        ", isAccepted=" + isAccepted +
-        ", score=" + score +
-        ", lastActivityDate=" + lastActivityDate +
-        ", lastEditDate=" + lastEditDate +
-        ", creationDate=" + creationDate +
-        ", answerId=" + answerId +
-        ", questionId=" + questionId +
-        ", contentLicense='" + contentLicense + '\'' +
-        '}';
-  }
 }

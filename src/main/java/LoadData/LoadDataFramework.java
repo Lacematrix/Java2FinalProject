@@ -4,12 +4,6 @@ import LoadData.DataClass.QuestionLoad;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,6 +11,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 
 public class LoadDataFramework {
 
@@ -29,7 +28,7 @@ public class LoadDataFramework {
     catchComment(n, dataPath, blockSize); // 如果不分次数，则返回的对应question的comment只有一个
 //        catchTag(n,dataPath);
 //        catchThread(n,dataPath);
-//        catchAPIData(n,dataPath);
+//        catchAPIData(50,dataPath);
   }
 
   public static void catchQuestion(int n, String dataPath) throws IOException {

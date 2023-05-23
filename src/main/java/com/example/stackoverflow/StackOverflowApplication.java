@@ -22,7 +22,7 @@ public class StackOverflowApplication {
         int n = 5;
         tagService.addTag(n);
         userService.addUserAndThread(n);
-        apiDataService.addAPIData(n);
+        apiDataService.addAPIData(50);
         questionService.addQuestion(n);
         answerService.addAnswer(n);
         answerService.setQuestionNum(questionService.getNumberOfQuestion());

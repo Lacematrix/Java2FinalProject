@@ -20,12 +20,13 @@ public class TagController {
     this.tagService = tagService;
   }
 
+
   @GetMapping("/MostUsedTags")
   public ResponseEntity<Object> get5MostUsedTags(){// TODO: 2023/5/21  front end. method return 5 most relevant tags(objects)
     List<Tag> tagsOrigin= tagService.getMostUsedTags();
     Map<String, Integer> tags = new HashMap<>();
     for (Tag x:tagsOrigin){
-    tags.put(x.getTagCombination(),x.getNum() );
+    tags.put(x.getCombination(),x.getNum() );
     }
     return ResponseEntity.ok(tags);
   }
@@ -35,18 +36,23 @@ public class TagController {
     Map<String, Integer> tags = new HashMap<>();
     for (int i=1;i<=4;i++){
       Tag temp=tagService.getTopUpvotedTag(i);
-      tags.put(temp.getTagCombination(),temp.getNum());
+      tags.put(temp.getCombination(),temp.getUpvote());
     }
     return ResponseEntity.ok(tags);
   }
 
-  @GetMapping("/getTopUpvotedTag")
+  @GetMapping("/getTopViewTag")
   public ResponseEntity<Object> getTopViewTag(){// TODO: 2023/5/21  front end. method return most view tagCombination(object) with the input size, it is recommend to display size 2 to 4
     Map<String, Integer> tags = new HashMap<>();
     for (int i=1;i<=4;i++){
       Tag temp=tagService.getTopViewTag(i);
-      tags.put(temp.getTagCombination(),temp.getNum());
+      tags.put(temp.getCombination(),temp.getView());
     }
     return ResponseEntity.ok(tags);
+  }
+
+  @GetMapping
+  public ResponseEntity<Object> getTag(){
+    return ResponseEntity.ok(tagService.getAllTags());
   }
 }

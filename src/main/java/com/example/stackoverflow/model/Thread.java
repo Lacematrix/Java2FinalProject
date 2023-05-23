@@ -7,48 +7,48 @@ public class Thread {
   @Id
   @GeneratedValue
   private Long id;
-  private int ansUserCnt;
-  private double ansUserPercent;
-  private int commentUserCnt;
-  private double commentUserPercent;
+  private int ans_Cnt;
+  private double ans_Percent;
+  private int comment_Cnt;
+  private double comment_Percent;
 
   public Long getId() {
     return id;
   }
 
-  public int getAnsUserCnt() {
-    return ansUserCnt;
+  public int getAns_Cnt() {
+    return ans_Cnt;
   }
 
-  public double getAnsUserPercent() {
-    return ansUserPercent;
+  public double getAns_Percent() {
+    return ans_Percent;
   }
 
-  public int getCommentUserCnt() {
-    return commentUserCnt;
+  public int getComment_Cnt() {
+    return comment_Cnt;
   }
 
-  public double getCommentUserPercent() {
-    return commentUserPercent;
+  public double getComment_Percent() {
+    return comment_Percent;
   }
 
   public void setId(Long id) {
     this.id = id;
   }
 
-  public void setAnsUserCnt(int ansUserCnt) {
-    this.ansUserCnt = ansUserCnt;
+  public void setAns_Cnt(int ansUserCnt) {
+    this.ans_Cnt = ansUserCnt;
   }
 
-  public void setAnsUserPercent(double ansUserPercent) {
-    this.ansUserPercent = ansUserPercent;
+  public void setAns_Percent(double ansUserPercent) {
+    this.ans_Percent = ansUserPercent;
   }
 
-  public void setCommentUserCnt(int commentUserCnt) {
-    this.commentUserCnt = commentUserCnt;
+  public void setComment_Cnt(int commentUserCnt) {
+    this.comment_Cnt = commentUserCnt;
   }
 
-  public void setCommentUserPercent(double commentUserPercent) {
-    this.commentUserPercent = commentUserPercent;
+  public void setComment_Percent(double commentUserPercent) {
+    this.comment_Percent = commentUserPercent;
   }
 }

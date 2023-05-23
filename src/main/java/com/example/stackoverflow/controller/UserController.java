@@ -37,7 +37,7 @@ public class UserController {
     Map<String, Integer> activeUsers = new HashMap<>();
     List<Account> temp=userService.getActiveUser();
     for (Account x:temp){
-      activeUsers.put(x.getUserName(),x.getJoinCnt());
+      activeUsers.put(x.getUser_Name(),x.getJoincnt());
     }
     return ResponseEntity.ok(activeUsers);
   }

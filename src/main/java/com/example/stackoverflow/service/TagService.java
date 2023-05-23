@@ -24,27 +24,32 @@ public class TagService {
   }
 
   public List<Tag> getMostUsedTags() {
-    return tagRepository.findMostUsedTags();
+    return tagRepository.findTop5BySizeOrderByNumDesc(1);
   }
 
   public Tag getTopUpvotedTag(int size) {
-    return tagRepository.findMaxUpvote(size);
+    return tagRepository.findTopBySizeOrderByUpvoteDesc(size).get(0);
   }
 
   public Tag getTopViewTag(int size) {
-    return tagRepository.findMaxView(size);
+    return tagRepository.findTopBySizeOrderByViewDesc(size).get(0);
+  }
+
+  public List<Tag> getAllTags() {
+    return tagRepository.findAll();
   }
 
 
   public void saveTags(String tagCombination, int size, int view, int upvote) {
-    Tag tag = tagRepository.getTagByTagCombination(tagCombination);
+    Tag tag = tagRepository.getTagByCombination(tagCombination);
     if (tag != null) {
       tag.setNum(tag.getNum() + 1);
       tag.setView(tag.getView() + view);
       tag.setUpvote(tag.getUpvote() + upvote);
+      tagRepository.save(tag);
     } else {
       Tag newTag = new Tag();
-      newTag.setTagCombination(tagCombination);
+      newTag.setCombination(tagCombination);
       newTag.setNum(1);
       newTag.setSize(size);
       newTag.setView(view);
@@ -74,7 +79,9 @@ public class TagService {
           }
         }
         String tagCombination = stringBuilder.toString();
-        saveTags(tagCombination, tags.size(), q.getView_count(), q.getUp_vote_count());
+        if (!tagCombination.equals("java")) {
+          saveTags(tagCombination, tags.size(), q.getView_count(), q.getUp_vote_count());
+        }
       }
     }
   }

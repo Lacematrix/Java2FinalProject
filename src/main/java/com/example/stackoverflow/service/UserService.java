@@ -32,14 +32,15 @@ public class UserService {
   }
 
   public void saveUser(UserStructure userStructure) {
-    Account account = accountRepository.getAccountByUserId(userStructure.getUser_id());
+    Account account = accountRepository.getAccountByUserid(userStructure.getUser_id());
     if (account != null) {
-      account.setJoinCnt(account.getJoinCnt() + 1);
+      account.setJoincnt(account.getJoincnt() + 1);
+      accountRepository.save(account);
     } else {
       Account newAccount = new Account();
-      newAccount.setUserName(userStructure.getDisplay_name());
-      newAccount.setJoinCnt(1);
-      newAccount.setUserId(userStructure.getUser_id());
+      newAccount.setUser_Name(userStructure.getDisplay_name());
+      newAccount.setJoincnt(1);
+      newAccount.setUserid(userStructure.getUser_id());
       accountRepository.save(newAccount);
     }
   }
@@ -53,7 +54,7 @@ public class UserService {
   }
 
   public List<Account> getActiveUser() {
-    return accountRepository.findActiveUser();
+    return accountRepository.findTop5ByOrderByJoincntDesc();
   }
 
   public void addUserAndThread(int n) throws IOException {
@@ -88,10 +89,10 @@ public class UserService {
           }
         }
         Thread thread = new Thread();
-        thread.setAnsUserCnt(answerSet.size());
-        thread.setAnsUserPercent(answerSet.size() / (1 + answerSet.size() + commentSet.size()));
-        thread.setCommentUserCnt(commentSet.size());
-        thread.setCommentUserPercent(commentSet.size() / (1 + answerSet.size() + commentSet.size()));
+        thread.setAns_Cnt(answerSet.size());
+        thread.setAns_Percent((double)answerSet.size() / (double)(1 + answerSet.size() + commentSet.size()));
+        thread.setComment_Cnt(commentSet.size());
+        thread.setComment_Percent((double)commentSet.size() /(double) (1 + answerSet.size() + commentSet.size()));
         threadRepository.save(thread);
       }
     }

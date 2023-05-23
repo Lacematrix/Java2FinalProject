@@ -19,7 +19,7 @@ public class ApiController {
   public ApiController(APIDataService apiDataService) {
     this.apiDataService = apiDataService;
   }
-  @GetMapping("/MostUsedTags")
+  @GetMapping("/MostDiscussedApi")
   public ResponseEntity<Object> getTop5API(){
     // TODO: 2023/5/21 front end should display top 5 api. this method return Top5 APIData objects,whose apiName and type shuold be displayed.
     Map<Pair<String,String>, Integer> mostUseApi= new HashMap<>();// key:<API's name, Api's type(class or method)> value:discussed times

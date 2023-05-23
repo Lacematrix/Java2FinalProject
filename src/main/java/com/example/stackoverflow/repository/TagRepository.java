@@ -9,16 +9,17 @@ import java.util.List;
 
 
 public interface TagRepository extends JpaRepository<Tag, Long>{
-  Tag getTagByTagCombination(String tagCombination);
+  Tag getTagByCombination(String tagCombination);
 
-  @Query(value = "SELECT e.tagCombination,e.num FROM Tag e WHERE e.size=1 ORDER BY e.num DESC LIMIT 5" ,nativeQuery = true)
-  List<Tag> findMostUsedTags();
+//  @Query(value="SELECT combination,num FROM Tag WHERE Tag.size=1 ORDER BY num DESC LIMIT 5",nativeQuery = true)
+  List<Tag> findTop5BySizeOrderByNumDesc(Integer size);
 
-  @Query(value = "SELECT e.tagCombination,e.upvote FROM Tag e WHERE e.size=:size ORDER BY e.upvote DESC LIMIT 1", nativeQuery = true)
- Tag findMaxUpvote(@Param("size") Integer size);
+//  @Query(value = "SELECT combination,upvote FROM Tag  WHERE Tag.size=:s ORDER BY upvote DESC LIMIT 1",nativeQuery = true)
+// Tag findMaxUpvote(@Param("s") Integer s);
+  List<Tag> findTopBySizeOrderByUpvoteDesc(Integer size);
+//  @Query(value = "SELECT combination,view FROM Tag WHERE Tag.size=:s ORDER BY view DESC LIMIT 1",nativeQuery = true)
+// Tag findMaxView(@Param("s") Integer s);
 
-  @Query(value = "SELECT e.tagCombination,e.view FROM Tag e WHERE e.size=:size ORDER BY e.view DESC LIMIT 1", nativeQuery = true)
- Tag findMaxView(@Param("size") Integer size);
-
+  List<Tag> findTopBySizeOrderByViewDesc(Integer size);
 
 }

@@ -32,13 +32,14 @@ public class APIDataService {
   }
 
   public List<APIData> getTop5API() {
-    return apiDataRepository.findMax5API();
+    return apiDataRepository.findTop5ByOrderByCntDesc();
   }
 
   public void saveAPI(String apiName, int cnt, String type) {
     APIData apiData = apiDataRepository.getAPIDataByName(apiName);
     if (apiData != null) {
       apiData.setCnt(apiData.getCnt() + cnt);
+      apiDataRepository.save(apiData);
     } else {
       APIData newApi = new APIData();
       newApi.setCnt(cnt);

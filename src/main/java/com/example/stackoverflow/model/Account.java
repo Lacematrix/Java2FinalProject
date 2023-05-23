@@ -8,39 +8,39 @@ public class Account {
   @Id
   @GeneratedValue
   private Long id;
-  private Long userId;
-  private String userName;
-  private int joinCnt;
+  private Long userid;
+  private String user_Name;
+  private int joincnt;
 
   public Long getId() {
     return id;
   }
 
-  public Long getUserId() {
-    return userId;
+  public Long getUserid() {
+    return userid;
   }
 
-  public String getUserName() {
-    return userName;
+  public String getUser_Name() {
+    return user_Name;
   }
 
-  public int getJoinCnt() {
-    return joinCnt;
+  public int getJoincnt() {
+    return joincnt;
   }
 
   public void setId(Long id) {
     this.id = id;
   }
 
-  public void setUserId(Long userId) {
-    this.userId = userId;
+  public void setUserid(Long userId) {
+    this.userid = userId;
   }
 
-  public void setUserName(String userName) {
-    this.userName = userName;
+  public void setUser_Name(String userName) {
+    this.user_Name = userName;
   }
 
-  public void setJoinCnt(int ansCount) {
-    this.joinCnt = ansCount;
+  public void setJoincnt(int ansCount) {
+    this.joincnt = ansCount;
   }
 }

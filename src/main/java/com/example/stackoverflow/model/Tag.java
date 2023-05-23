@@ -8,7 +8,7 @@ public class Tag {
   @Id
   @GeneratedValue
   private Long id;
-  private String tagCombination;
+  private String combination;
   private Integer size;
   private Integer num;
   private Integer upvote;
@@ -21,8 +21,8 @@ public class Tag {
     return id;
   }
 
-  public String getTagCombination() {
-    return tagCombination;
+  public String getCombination() {
+    return combination;
   }
 
   public Integer getSize() {
@@ -33,8 +33,8 @@ public class Tag {
     return num;
   }
 
-  public void setTagCombination(String tags) {
-    this.tagCombination = tags;
+  public void setCombination(String tags) {
+    this.combination = tags;
   }
 
   public void setSize(Integer size) {
